@@ -1,6 +1,5 @@
-<?php 
-  //include(APPROOT . "/views/includes/head.php" );
-  echo $data["title"]; 
+<?php require APPROOT . '/views/includes/head.php';
+  echo $data["title"];
 ?>
 <a href="<?=URLROOT;?>/countries/create">Nieuw record</a>
 <table>

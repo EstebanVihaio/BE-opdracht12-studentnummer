@@ -6,9 +6,17 @@
     private $dbName = DB_NAME;
     private $statement;
     private $dbHandler;
-    private $error;
+    private $error;    
 
-    public function __construct() {
+    public function  __get($property) 
+    {
+        if (property_exists($this, $property)) {
+            return $this->$property;
+        }
+    }
+
+    public function __construct() 
+    {
       $conn = 'mysql:host=' . $this->dbHost . ";dbname=" . $this->dbName;
       $options = array(
         PDO::ATTR_PERSISTENT => true,
@@ -16,9 +24,12 @@
         PDO::ATTR_EMULATE_PREPARES => false
       );
 
-      try {
+      try 
+      {
         $this->dbHandler = new PDO($conn, $this->dbUser, $this->dbPass, $options);
-      } catch(PDOException $e) {
+        // $this->test = $this->dbHandler;
+      } 
+      catch(PDOException $e) {
         $this->error = $e->getMessage();
         echo $this->error;
       }

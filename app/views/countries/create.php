@@ -1,3 +1,4 @@
+<?php require APPROOT . '/views/includes/head.php'; ?>
 <?= $data['title']; ?>
 
 <form action="<?= URLROOT; ?>/countries/create" method="post">
@@ -36,3 +37,4 @@
   </table>
 
 </form>
+<?php require APPROOT . '/views/includes/footer.php'; ?>

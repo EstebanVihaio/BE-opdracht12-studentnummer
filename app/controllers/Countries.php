@@ -45,7 +45,7 @@ class Countries extends Controller {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
       $this->countryModel->updateCountry($_POST);
-      header("Location: " . URLROOT . "/countries/index");
+      header("Location:" . URLROOT . "/countries/index");
     } else {
       $row = $this->countryModel->getSingleCountry($id);
       $data = [
