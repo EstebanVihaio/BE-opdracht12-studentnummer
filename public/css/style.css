@@ -1,7 +1,3 @@
-h3 {
-  /* border: 2px solid red; */
-}
-
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -13,4 +9,10 @@ body {
 .errorForm {
     color: red;
     font-size: 0.7em;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
 }
